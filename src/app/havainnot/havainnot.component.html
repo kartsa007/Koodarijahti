@@ -1,0 +1,6 @@
+<div>
+  <button (click)="changeSortOrder()">Lajittele</button>
+  <div *ngFor="let s of sightings">
+    <app-havainto [sighting]="s"></app-havainto>
+  </div>
+</div>

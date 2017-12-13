@@ -1,0 +1,18 @@
+<p>
+  Havaintokuvaus
+  <textarea [(ngModel)]="description" (input)="input()"></textarea>
+  Ankkalaji:
+  <select [(ngModel)]="species" (input)="input()">
+    <option *ngFor="let choice of specieses" [ngValue]="choice.name">{{choice.name}}</option>
+  </select>
+  Lukumäärä:
+  <input  [(ngModel)]="cnt" (input)="input()"/>
+  Havaintopäivämäärä
+  <input type="text" placeholder="2017-12-30" [(ngModel)]="date" (input)="input()"/>
+  Kellonaika:
+  <input type="text" placeholder="14:30" [(ngModel)]="time" (input)="input()"/>
+  <button (click)="save($event)">Talleta havainto</button>
+</p>
+<p>
+  {{errorTxt}}
+</p>
